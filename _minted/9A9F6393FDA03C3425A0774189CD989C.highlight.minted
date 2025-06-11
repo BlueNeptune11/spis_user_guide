@@ -1,0 +1,110 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+
+\PYG{+w}{    }\PYG{c+c1}{// Simple spacecraft model}
+\PYG{+w}{    }\PYG{c+c1}{// Mika Holmberg}
+\PYG{+w}{    }\PYG{c+c1}{// 2024\PYGZhy{}07\PYGZhy{}31}
+
+\PYG{+w}{    }\PYG{c+c1}{// Lengths}
+
+\PYG{+w}{    }\PYG{n}{l}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.1}\PYG{p}{;}\PYG{+w}{	}\PYG{c+c1}{// Characteristic length for mesh generation}
+\PYG{+w}{    }\PYG{n}{b}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{;}\PYG{+w}{		}\PYG{c+c1}{// Characteristic length for mesh generation on the boundary}
+
+\PYG{+w}{    }\PYG{c+c1}{// The spacecraft body}
+
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{l}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{101}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{l}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{102}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{l}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{103}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{l}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{104}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{l}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{105}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{l}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{106}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{l}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{107}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{l}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// The outer boundary}
+
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{108}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{109}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{30}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{110}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{30}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{111}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{30}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{112}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{30}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{113}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{30}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{p}{(}\PYG{l+m+mi}{114}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{30}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// Lines for the spacecraft}
+
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{101}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{201}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{101}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{102}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{202}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{102}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{103}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{203}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{103}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{204}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{104}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{105}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{205}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{105}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{106}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{206}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{106}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{107}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{207}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{107}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{104}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{208}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{105}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{101}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{209}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{102}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{106}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{210}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{103}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{107}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{p}{(}\PYG{l+m+mi}{211}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{104}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// Lines for the outer boundary}
+
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{212}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{109}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{110}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{213}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{110}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{111}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{214}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{111}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{112}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{215}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{112}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{109}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{216}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{109}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{113}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{217}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{113}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{111}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{218}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{111}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{114}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{219}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{114}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{109}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{220}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{112}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{113}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{221}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{113}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{110}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{222}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{110}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{114}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{223}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{114}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{108}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{112}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// Defining the surfaces on the satellite}
+
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{300}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{200}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{201}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{202}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{203}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Plane}\PYG{+w}{ }\PYG{n+nf}{Surface}\PYG{p}{(}\PYG{l+m+mi}{301}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{300}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{302}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{204}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{205}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{206}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{207}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Plane}\PYG{+w}{ }\PYG{n+nf}{Surface}\PYG{p}{(}\PYG{l+m+mi}{303}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{302}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{304}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{204}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{208}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{200}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{211}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Plane}\PYG{+w}{ }\PYG{n+nf}{Surface}\PYG{p}{(}\PYG{l+m+mi}{305}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{304}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{306}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{202}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{210}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{206}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{209}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Plane}\PYG{+w}{ }\PYG{n+nf}{Surface}\PYG{p}{(}\PYG{l+m+mi}{307}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{306}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{308}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{205}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{209}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{201}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{208}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Plane}\PYG{+w}{ }\PYG{n+nf}{Surface}\PYG{p}{(}\PYG{l+m+mi}{309}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{308}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{310}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{211}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{203}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{210}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{207}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Plane}\PYG{+w}{ }\PYG{n+nf}{Surface}\PYG{p}{(}\PYG{l+m+mi}{311}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{310}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// Defining the surfaces of the outer boundary}
+
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{312}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{212}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{221}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{216}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Surface}\PYG{p}{(}\PYG{l+m+mi}{313}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{312}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{314}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{213}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{217}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{221}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Surface}\PYG{p}{(}\PYG{l+m+mi}{315}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{314}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{316}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{214}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{220}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{217}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Surface}\PYG{p}{(}\PYG{l+m+mi}{317}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{316}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{318}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{215}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{216}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{220}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Surface}\PYG{p}{(}\PYG{l+m+mi}{319}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{318}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{320}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{212}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{222}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{219}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Surface}\PYG{p}{(}\PYG{l+m+mi}{321}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{320}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{322}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{213}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{218}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{222}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Surface}\PYG{p}{(}\PYG{l+m+mi}{323}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{322}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{324}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{214}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{223}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{218}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Surface}\PYG{p}{(}\PYG{l+m+mi}{325}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{324}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Line}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{326}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{215}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{219}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{223}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Surface}\PYG{p}{(}\PYG{l+m+mi}{327}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{326}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// Defining the computational volume}
+
+\PYG{+w}{    }\PYG{n}{Surface}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{400}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{301}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{303}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{305}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{307}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{309}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{311}\PYG{p}{\PYGZcb{}}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Spacecraft}
+\PYG{+w}{    }\PYG{n}{Surface}\PYG{+w}{ }\PYG{n+nf}{Loop}\PYG{p}{(}\PYG{l+m+mi}{401}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{313}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{315}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{317}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{319}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{321}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{323}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{325}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{327}\PYG{p}{\PYGZcb{}}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Outer boundary}
+\PYG{+w}{    }\PYG{n}{Volume}\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{401}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{400}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// Physical groups}
+
+\PYG{+w}{    }\PYG{n}{Physical}\PYG{+w}{ }\PYG{n+nf}{Surface}\PYG{p}{(}\PYG{l+m+mi}{600}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{301}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{303}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{305}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{307}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{309}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{311}\PYG{p}{\PYGZcb{}}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Spacecraft}
+\PYG{+w}{    }\PYG{n}{Physical}\PYG{+w}{ }\PYG{n+nf}{Surface}\PYG{p}{(}\PYG{l+m+mi}{601}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{313}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{315}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{317}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{319}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{321}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{323}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{325}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{327}\PYG{p}{\PYGZcb{}}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Outer boundary}
+
+\PYG{+w}{    }\PYG{n}{Physical}\PYG{+w}{ }\PYG{n+nf}{Volume}\PYG{p}{(}\PYG{l+m+mi}{700}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{500}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+\end{MintedVerbatim}
