@@ -196,7 +196,7 @@ To start SPIS, open a terminal window, go to the SPIS folder and type \verb|sh S
     \caption{How to navigate the SPIS folder.}
 \end{figure}
 
-For Mac users, the first attempt to open SPIS typically results in an error message. This is due to the default security settings of Mac, which only allows apps from App Store or from known developers to be opened. To change these settings go to "Security \& Privacy" setting in "System Preferences". This should open a window like the one shown in Figure 16. Make sure that "App Store and identified developers" is selected . Next to the blocked app, choose "Allow Anyway" and try to open SPIS again. This process will likely have to be repeated multiple times before the SPIS start window, like the one shown in Figure 14, will be opened. The main features from the SPIS start window are "Open an existing project", used to access previously started projects, and "Create a new project". Select "Create a new project" to begin.
+For Mac users, the first attempt to open SPIS typically results in an error message. This is due to the default security settings of Mac, which only allows apps from App Store or from known developers to be opened. To change these settings go to \verb|Security \& Privacy| setting in \verb|System Preferences|. This should open a window like the one shown in Figure 16. Make sure that \verb|App Store and identified developers| is selected . Next to the blocked app, choose \verb|Allow Anyway| and try to open SPIS again. This process will likely have to be repeated multiple times before the SPIS start window, like the one shown in Figure 14, will be opened. The main features from the SPIS start window are \verb|Open an existing project|, used to access previously started projects, and \verb|Create a new project|. Select \verb|Create a new project| to begin.
 
 \begin{figure}[!ht]
     \centering
@@ -204,7 +204,7 @@ For Mac users, the first attempt to open SPIS typically results in an error mess
     \caption{Example of files included in the SPIS download that might have to be manually approved.}
 \end{figure}
 
-Clicking "Create a new project" opens the window shown in Figure 17, where a name for the new project must be specified. As multiple simulations with similar set-ups are likely to be executed, it is recommended to use a naming convention such as Run001. Including the 00 ensures that the projects are sorted in the correct order and not in, for example, the order Run1, Run100, Run2 etc. Select a "Project parent folder" that reflects the simulated environment or specific conditions, for example "Ionosphere". Since a large number of simulations are typically conducted during the course of a project, it is advisable to create a Readme document to log all the input parameters for each simulation. This will make it much easier to know what separates the different simulation runs. It is not advisable to try to list this in the name of the project, since this will lead to excessively long names that still fail to capture all the input parameters in the name.
+Clicking \verb|Create a new project| opens the window shown in Figure 17, where a name for the new project must be specified. As multiple simulations with similar set-ups are likely to be executed, it is recommended to use a naming convention such as Run001. Including the 00 ensures that the projects are sorted in the correct order and not in, for example, the order Run1, Run100, Run2 etc. Select a \verb|Project parent folder| that reflects the simulated environment or specific conditions, for example \verb|Ionosphere|. Since a large number of simulations are typically conducted during the course of a project, it is advisable to create a Readme document to log all the input parameters for each simulation. This will make it much easier to know what separates the different simulation runs. It is not advisable to try to list this in the name of the project, since this will lead to excessively long names that still fail to capture all the input parameters in the name.
 
 \begin{figure}[!ht]
     \centering
@@ -212,7 +212,7 @@ Clicking "Create a new project" opens the window shown in Figure 17, where a nam
     \caption{Name your project and place it in the correct folder.}
 \end{figure}
 
-Since the mesh has already been created using Gmsh, this step can be skipped by selecting the "Skip geometry editor" option. Click "Create project and \verb|save|" and you have \verb|now started you|r first SPIS project\verb|. |Congratulations! The next window looks like the one in Figure 18 and this is the point at which the spacecraft model construction begins.
+Since the mesh has already been created using Gmsh, this step can be skipped by selecting the \verb|Skip geometry editor| option. Click \verb|Create project and save| and you have now started your first SPIS project. Congratulations! The next window looks like the one in Figure 18 and this is the point at which the spacecraft model construction begins.
 
 \begin{figure}[!ht]
     \centering
@@ -222,7 +222,7 @@ Since the mesh has already been created using Gmsh, this step can be skipped by 
 
 \subsection{The material library} %unclear how to import mesh if already generated, and how to get to figure 20
 
-The next step is to define the properties of the spacecraft materials using the group editor, as shown in Figure 19. In the left menu, all defined physical surfaces and volumes will appear. They are identified with the assigned ID numbers. The first physical surface is the spacecraft with ID number 600. Selecting this surface allows the "Group type" to be set, which should be "Spacecraft surface group". This group type includes a range of properties, most of them can be left at their default values, but the most important one is the "S/C material". SPIS already has a material library with many common spacecraft materials, for this example the "Kapton Black (2K) material properties" is selected, which is a common spacecraft surface material.
+The next step is to define the properties of the spacecraft materials using the group editor, as shown in Figure 19. In the left menu, all defined physical surfaces and volumes will appear. They are identified with the assigned ID numbers. The first physical surface is the spacecraft with ID number \verb|600|. Selecting this surface allows the \verb|Group type| to be set, which should be \verb|Spacecraft surface group|. This group type includes a range of properties, most of them can be left at their default values, but the most important one is the \verb|S/C material|. SPIS already has a material library with many common spacecraft materials, for this example the \verb|Kapton Black (2K) material properties| is selected, which is a common spacecraft surface material.
 
 \begin{figure}[!ht]
     \centering
