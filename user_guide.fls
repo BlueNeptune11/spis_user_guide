@@ -140,6 +140,11 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -154,7 +159,6 @@ INPUT ./user_guide.aux
 INPUT ./user_guide.aux
 INPUT user_guide.aux
 OUTPUT user_guide.aux
-OUTPUT user_guide.out
 OUTPUT user_guide.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -177,10 +181,10 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT user_guide.toc
-INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -201,8 +205,6 @@ INPUT _minted/9A9F6393FDA03C3425A0774189CD989C.highlight.minted
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmitt10.tfm
 OUTPUT _7471DA86FF67BAD03BAEA3B4B8315DFB.data.minted
 INPUT user_guide.aux
-INPUT ./user_guide.out
-INPUT ./user_guide.out
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb

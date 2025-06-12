@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.11)  11 JUN 2025 16:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.11)  12 JUN 2025 11:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -355,9 +355,14 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@minted@FancyVerbLineTemp=\count332
 \@float@every@listing=\toks34
 \c@listing=\count333
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 18.
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 27.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
+\BKM@id=\count334
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 19.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 28.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2024/06/23 v1.3e Standard LaTeX Color (DPC)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -366,29 +371,29 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count334
+\l__color_backend_stack_int=\count335
 \l__pdf_internal_box=\box73
 ) (./user_guide.aux)
 \openout1 = `user_guide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -429,22 +434,19 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 27.
-\@outlinefile=\write4
-\openout4 = `user_guide.out'.
-
+Package hyperref Info: Link coloring ON on input line 28.
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count335
+\scratchcounter=\count336
 \scratchdimen=\dimen191
 \scratchbox=\box74
-\nofMPsegments=\count336
-\nofMParguments=\count337
+\nofMPsegments=\count337
+\nofMParguments=\count338
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count338
+\MPscratchCnt=\count339
 \MPscratchDim=\dimen192
-\MPnumerator=\count339
-\makeMPintoPDFobject=\count340
+\MPnumerator=\count340
+\makeMPintoPDFobject=\count341
 \everyMPtoPDFconversion=\toks36
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -454,152 +456,121 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 27.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 29.
+(Font)              <12> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 29.
+(Font)              <8> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 29.
-
-No file user_guide.toc.
-\tf@toc=\write5
-\openout5 = `user_guide.toc'.
-
+(Font)              <6> on input line 30.
 
 
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 42.
-
-
-LaTeX Warning: File `fig1.jpg' not found on input line 48.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:48: Package pdftex.def Error: File `fig1.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.48 ...degraphics[width=0.45\textwidth]{fig1.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig2.jpg' not found on input line 54.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:54: Package pdftex.def Error: File `fig2.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 ...degraphics[width=0.45\textwidth]{fig2.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig3.jpg' not found on input line 60.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:60: Package pdftex.def Error: File `fig3.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60 ...degraphics[width=0.45\textwidth]{fig3.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+No file user_guide.toc.
+\tf@toc=\write4
+\openout4 = `user_guide.toc'.
 
 
 
 [2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 44.
+
+
+LaTeX Warning: File `fig1.jpg' not found on input line 50.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:50: Package pdftex.def Error: File `fig1.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ...degraphics[width=0.45\textwidth]{fig1.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig2.jpg' not found on input line 56.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:56: Package pdftex.def Error: File `fig2.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 ...degraphics[width=0.45\textwidth]{fig2.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig3.jpg' not found on input line 62.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:62: Package pdftex.def Error: File `fig3.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 ...degraphics[width=0.45\textwidth]{fig3.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
 
 [3]
 
 [4]
 
-LaTeX Warning: File `fig4.jpg' not found on input line 96.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:96: Package pdftex.def Error: File `fig4.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.96 ...degraphics[width=0.45\textwidth]{fig4.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig5.jpg' not found on input line 111.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:111: Package pdftex.def Error: File `fig5.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.111 ...egraphics[width=0.45\textwidth]{fig5.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig6.jpg' not found on input line 117.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:117: Package pdftex.def Error: File `fig6.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ...egraphics[width=0.45\textwidth]{fig6.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-
 [5]
 
-LaTeX Warning: File `fig7.jpg' not found on input line 126.
+LaTeX Warning: File `fig4.jpg' not found on input line 98.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:126: Package pdftex.def Error: File `fig7.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:98: Package pdftex.def Error: File `fig4.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 ...egraphics[width=0.45\textwidth]{fig7.jpg}
+l.98 ...degraphics[width=0.45\textwidth]{fig4.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `fig8.jpg' not found on input line 132.
+LaTeX Warning: File `fig5.jpg' not found on input line 113.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:132: Package pdftex.def Error: File `fig8.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:113: Package pdftex.def Error: File `fig5.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132 ...egraphics[width=0.45\textwidth]{fig8.jpg}
+l.113 ...egraphics[width=0.45\textwidth]{fig5.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig6.jpg' not found on input line 119.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:119: Package pdftex.def Error: File `fig6.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 ...egraphics[width=0.45\textwidth]{fig6.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -608,31 +579,31 @@ If that doesn't work, type  X <return>  to quit.
 
 [6]
 
-LaTeX Warning: File `fig9.jpg' not found on input line 141.
+LaTeX Warning: File `fig7.jpg' not found on input line 128.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:141: Package pdftex.def Error: File `fig9.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:128: Package pdftex.def Error: File `fig7.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.141 ...egraphics[width=0.45\textwidth]{fig9.jpg}
+l.128 ...egraphics[width=0.45\textwidth]{fig7.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `fig10.jpg' not found on input line 147.
+LaTeX Warning: File `fig8.jpg' not found on input line 134.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:147: Package pdftex.def Error: File `fig10.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:134: Package pdftex.def Error: File `fig8.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.147 ...graphics[width=0.45\textwidth]{fig10.jpg}
+l.134 ...egraphics[width=0.45\textwidth]{fig8.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -641,31 +612,31 @@ If that doesn't work, type  X <return>  to quit.
 
 [7]
 
-LaTeX Warning: File `fig11.jpg' not found on input line 155.
+LaTeX Warning: File `fig9.jpg' not found on input line 143.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:155: Package pdftex.def Error: File `fig11.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:143: Package pdftex.def Error: File `fig9.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.155 ...graphics[width=0.45\textwidth]{fig11.jpg}
+l.143 ...egraphics[width=0.45\textwidth]{fig9.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `fig12.jpg' not found on input line 166.
+LaTeX Warning: File `fig10.jpg' not found on input line 149.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:166: Package pdftex.def Error: File `fig12.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:149: Package pdftex.def Error: File `fig10.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.166 ...graphics[width=0.45\textwidth]{fig12.jpg}
+l.149 ...graphics[width=0.45\textwidth]{fig10.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -674,16 +645,31 @@ If that doesn't work, type  X <return>  to quit.
 
 [8]
 
-LaTeX Warning: File `fig13.jpg' not found on input line 174.
+LaTeX Warning: File `fig11.jpg' not found on input line 157.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:174: Package pdftex.def Error: File `fig13.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:157: Package pdftex.def Error: File `fig11.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.174 ...graphics[width=0.45\textwidth]{fig13.jpg}
+l.157 ...graphics[width=0.45\textwidth]{fig11.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig12.jpg' not found on input line 168.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:168: Package pdftex.def Error: File `fig12.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 ...graphics[width=0.45\textwidth]{fig12.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -692,31 +678,16 @@ If that doesn't work, type  X <return>  to quit.
 
 [9]
 
-LaTeX Warning: File `fig14.jpg' not found on input line 187.
+LaTeX Warning: File `fig13.jpg' not found on input line 176.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:187: Package pdftex.def Error: File `fig14.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.187 ...graphics[width=0.45\textwidth]{fig14.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig15.jpg' not found on input line 193.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:193: Package pdftex.def Error: File `fig15.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:176: Package pdftex.def Error: File `fig13.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.193 ...graphics[width=0.45\textwidth]{fig15.jpg}
+l.176 ...graphics[width=0.45\textwidth]{fig13.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -725,16 +696,31 @@ If that doesn't work, type  X <return>  to quit.
 
 [10]
 
-LaTeX Warning: File `fig16.jpg' not found on input line 201.
+LaTeX Warning: File `fig14.jpg' not found on input line 189.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:201: Package pdftex.def Error: File `fig16.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:189: Package pdftex.def Error: File `fig14.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.201 ...graphics[width=0.45\textwidth]{fig16.jpg}
+l.189 ...graphics[width=0.45\textwidth]{fig14.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig15.jpg' not found on input line 195.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:195: Package pdftex.def Error: File `fig15.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.195 ...graphics[width=0.45\textwidth]{fig15.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -743,31 +729,16 @@ If that doesn't work, type  X <return>  to quit.
 
 [11]
 
-LaTeX Warning: File `fig17.jpg' not found on input line 209.
+LaTeX Warning: File `fig16.jpg' not found on input line 203.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:209: Package pdftex.def Error: File `fig17.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 ...graphics[width=0.45\textwidth]{fig17.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig18.jpg' not found on input line 217.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:217: Package pdftex.def Error: File `fig18.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:203: Package pdftex.def Error: File `fig16.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.217 ...graphics[width=0.45\textwidth]{fig18.jpg}
+l.203 ...graphics[width=0.45\textwidth]{fig16.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -776,76 +747,31 @@ If that doesn't work, type  X <return>  to quit.
 
 [12]
 
-LaTeX Warning: File `fig19.jpg' not found on input line 227.
+LaTeX Warning: File `fig17.jpg' not found on input line 211.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:227: Package pdftex.def Error: File `fig19.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:211: Package pdftex.def Error: File `fig17.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.227 ...graphics[width=0.45\textwidth]{fig19.jpg}
+l.211 ...graphics[width=0.45\textwidth]{fig17.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `fig20.jpg' not found on input line 235.
+LaTeX Warning: File `fig18.jpg' not found on input line 219.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:235: Package pdftex.def Error: File `fig20.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.235 ...graphics[width=0.45\textwidth]{fig20.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig21.jpg' not found on input line 241.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:241: Package pdftex.def Error: File `fig21.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:219: Package pdftex.def Error: File `fig18.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.241 ...graphics[width=0.45\textwidth]{fig21.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig22.jpg' not found on input line 247.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:247: Package pdftex.def Error: File `fig22.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.247 ...graphics[width=0.45\textwidth]{fig22.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig23.jpg' not found on input line 255.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:255: Package pdftex.def Error: File `fig23.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.255 ...graphics[width=0.45\textwidth]{fig23.jpg}
+l.219 ...graphics[width=0.45\textwidth]{fig18.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -854,16 +780,76 @@ If that doesn't work, type  X <return>  to quit.
 
 [13]
 
-LaTeX Warning: File `fig24.jpg' not found on input line 270.
+LaTeX Warning: File `fig19.jpg' not found on input line 229.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:270: Package pdftex.def Error: File `fig24.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:229: Package pdftex.def Error: File `fig19.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.270 ...graphics[width=0.45\textwidth]{fig24.jpg}
+l.229 ...graphics[width=0.45\textwidth]{fig19.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig20.jpg' not found on input line 237.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:237: Package pdftex.def Error: File `fig20.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.237 ...graphics[width=0.45\textwidth]{fig20.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig21.jpg' not found on input line 243.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:243: Package pdftex.def Error: File `fig21.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.243 ...graphics[width=0.45\textwidth]{fig21.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig22.jpg' not found on input line 249.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:249: Package pdftex.def Error: File `fig22.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.249 ...graphics[width=0.45\textwidth]{fig22.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig23.jpg' not found on input line 257.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:257: Package pdftex.def Error: File `fig23.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 ...graphics[width=0.45\textwidth]{fig23.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -872,16 +858,16 @@ If that doesn't work, type  X <return>  to quit.
 
 [14]
 
-LaTeX Warning: File `fig25.jpg' not found on input line 281.
+LaTeX Warning: File `fig24.jpg' not found on input line 272.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:281: Package pdftex.def Error: File `fig25.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:272: Package pdftex.def Error: File `fig24.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.281 ...graphics[width=0.45\textwidth]{fig25.jpg}
+l.272 ...graphics[width=0.45\textwidth]{fig24.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -890,46 +876,16 @@ If that doesn't work, type  X <return>  to quit.
 
 [15]
 
-LaTeX Warning: File `fig26.jpg' not found on input line 291.
+LaTeX Warning: File `fig25.jpg' not found on input line 283.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:291: Package pdftex.def Error: File `fig26.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.291 ...graphics[width=0.45\textwidth]{fig26.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig27.jpg' not found on input line 297.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:297: Package pdftex.def Error: File `fig27.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:283: Package pdftex.def Error: File `fig25.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.297 ...graphics[width=0.45\textwidth]{fig27.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig28.jpg' not found on input line 307.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:307: Package pdftex.def Error: File `fig28.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.307 ...graphics[width=0.45\textwidth]{fig28.jpg}
+l.283 ...graphics[width=0.45\textwidth]{fig25.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -938,98 +894,137 @@ If that doesn't work, type  X <return>  to quit.
 
 [16]
 
-LaTeX Warning: File `fig29.jpg' not found on input line 316.
+LaTeX Warning: File `fig26.jpg' not found on input line 293.
 
 
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:316: Package pdftex.def Error: File `fig29.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.316 ...graphics[width=0.45\textwidth]{fig29.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fig30.jpg' not found on input line 322.
-
-
-/Users/nathan/Documents/Code/spis_tex/user_guide.tex:322: Package pdftex.def Error: File `fig30.jpg' not found: using draft setting.
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:293: Package pdftex.def Error: File `fig26.jpg' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.322 ...graphics[width=0.45\textwidth]{fig30.jpg}
+l.293 ...graphics[width=0.45\textwidth]{fig26.jpg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-\pydata@fh@_7471DA86FF67BAD03BAEA3B4B8315DFB.data.minted=\write6
-\openout6 = `_7471DA86FF67BAD03BAEA3B4B8315DFB.data.minted'.
 
-runsystem(latexminted config  --timestamp 20250611165210 7471DA86FF67BAD03BAEA3B4B8315DFB)...executed safely (allowed).
+LaTeX Warning: File `fig27.jpg' not found on input line 299.
 
-(./_7471DA86FF67BAD03BAEA3B4B8315DFB.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20250611165210 7471DA86FF67BAD03BAEA3B4B8315DFB)...executed safely (allowed).
 
- (./_minted/default.style.minted) (./_minted/9A9F6393FDA03C3425A0774189CD989C.highlight.minted
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:299: Package pdftex.def Error: File `fig27.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.299 ...graphics[width=0.45\textwidth]{fig27.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig28.jpg' not found on input line 309.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:309: Package pdftex.def Error: File `fig28.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.309 ...graphics[width=0.45\textwidth]{fig28.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
 
 [17]
+
+LaTeX Warning: File `fig29.jpg' not found on input line 318.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:318: Package pdftex.def Error: File `fig29.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...graphics[width=0.45\textwidth]{fig29.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `fig30.jpg' not found on input line 324.
+
+
+/Users/nathan/Documents/Code/spis_tex/user_guide.tex:324: Package pdftex.def Error: File `fig30.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.324 ...graphics[width=0.45\textwidth]{fig30.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\pydata@fh@_7471DA86FF67BAD03BAEA3B4B8315DFB.data.minted=\write5
+\openout5 = `_7471DA86FF67BAD03BAEA3B4B8315DFB.data.minted'.
+
+runsystem(latexminted config  --timestamp 20250612113143 7471DA86FF67BAD03BAEA3B4B8315DFB)...executed safely (allowed).
+
+(./_7471DA86FF67BAD03BAEA3B4B8315DFB.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20250612113143 7471DA86FF67BAD03BAEA3B4B8315DFB)...executed safely (allowed).
+
+ (./_minted/default.style.minted) (./_minted/9A9F6393FDA03C3425A0774189CD989C.highlight.minted
 
 [18]
 
 [19]
 
-[20])
+[20]
 
-LaTeX Warning: Command \r invalid in math mode on input line 461.
+[21])
+
+LaTeX Warning: Command \r invalid in math mode on input line 463.
 
 
-Underfull \hbox (badness 7468) in paragraph at lines 461--462
+Underfull \hbox (badness 7468) in paragraph at lines 463--464
 []|\OT1/cmr/m/n/10.95 Range pa-ram-e-ter $\OML/cmm/m/it/10.95 r[]$ \OT1/cmr/m/n/10.95 in the range ex-pres-sion
  []
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 465.
+LaTeX Warning: Command \r invalid in math mode on input line 467.
 
 
 
-[21]
-\openout6 = `_7471DA86FF67BAD03BAEA3B4B8315DFB.data.minted'.
+[22]
+\openout5 = `_7471DA86FF67BAD03BAEA3B4B8315DFB.data.minted'.
 
-runsystem(latexminted clean  --timestamp 20250611165210 7471DA86FF67BAD03BAEA3B4B8315DFB)...executed safely (allowed).
+runsystem(latexminted clean  --timestamp 20250612113143 7471DA86FF67BAD03BAEA3B4B8315DFB)...executed safely (allowed).
 
  (./user_guide.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-Package rerunfilecheck Warning: File `user_guide.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `user_guide.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  DB426D9A773DC6E0C4BE56E0A29C8514;2249.
  ) 
 Here is how much of TeX's memory you used:
- 20585 strings out of 473190
- 448240 string characters out of 5715800
- 906485 words of memory out of 5000000
- 43568 multiletter control sequences out of 15000+600000
+ 20863 strings out of 473190
+ 452678 string characters out of 5715800
+ 910619 words of memory out of 5000000
+ 43839 multiletter control sequences out of 15000+600000
  564344 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,1317b,1565s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on user_guide.pdf (21 pages, 199816 bytes).
+Output written on user_guide.pdf (22 pages, 201364 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 77 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 282 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 

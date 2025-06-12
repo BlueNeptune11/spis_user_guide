@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1749657130.89367 "/Users/nathan/Documents/Code/spis_tex/user_guide.tex" "user_guide.pdf" "user_guide" 1749657132.97845 2
-  "/Users/nathan/Documents/Code/spis_tex/user_guide.tex" 1749656915.87664 35528 2186d7c0178c4ea6f66ba35dd8f1c69f ""
+["pdflatex"] 1749724303.27048 "/Users/nathan/Documents/Code/spis_tex/user_guide.tex" "user_guide.pdf" "user_guide" 1749724305.56513 2
+  "/Users/nathan/Documents/Code/spis_tex/user_guide.tex" 1749724298.20922 35564 f988756ba6337e51c97663b89742e821 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -58,6 +58,8 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1738182759 2378 14b657ee5031da98cf91648f19642694 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty" 1738182759 5048 0270515b828149155424600fd2d58ac5 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/base/size11.clo" 1738182759 8464 e73911cdcc738e82d6adccd28e654bb1 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bkm-pdftex.def" 1702241854 8818 aa5157b46368efebf023abff55611467 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bookmark.sty" 1702241854 18245 97e6be180cf07bb6f7008cfdaaecfce5 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty" 1696191071 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty" 1696191071 72619 ee90b6612147680fd73c3b1406a74245 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty" 1690576852 12494 0c0cdb824278a4d51cefeb2e79901315 ""
@@ -141,14 +143,12 @@
   "fig7.jpg" 0 -1 0 ""
   "fig8.jpg" 0 -1 0 ""
   "fig9.jpg" 0 -1 0 ""
-  "user_guide.aux" 1749657132.89638 6917 b049422b6d2a73f9c3d257397e416683 "pdflatex"
-  "user_guide.out" 1749657132.89744 2249 db426d9a773dc6e0c4be56e0a29c8514 "pdflatex"
-  "user_guide.tex" 1749656915.87664 35528 2186d7c0178c4ea6f66ba35dd8f1c69f ""
-  "user_guide.toc" 1749657132.89776 1134 5798f869f4f4051da5dd21928ad9211c "pdflatex"
+  "user_guide.aux" 1749724305.48193 11098 81fddd2978bff86e7bf399ec3dc1166d "pdflatex"
+  "user_guide.tex" 1749724298.20922 35564 f988756ba6337e51c97663b89742e821 ""
+  "user_guide.toc" 1749724305.4843 1134 7a87f60070d32acb0745ddab5902cc3d "pdflatex"
   (generated)
   "user_guide.aux"
   "user_guide.log"
-  "user_guide.out"
   "user_guide.pdf"
   "user_guide.toc"
   (rewritten before read)
