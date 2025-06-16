@@ -37,13 +37,11 @@
 \subsection{The Spacecraft Plasma Interaction Software (SPIS)}
 
 SPIS is a software used to model the interaction between an object, typically a spacecraft, and its surrounding space environment. The interaction is primarily driven by absorption or emission of charged particles. However, simulating the dynamics and emission or absorption of each particle would require immense computational resources. To address this, SPIS employs the particle-in-cell (PIC) method, which provides an efficient approximation. Within PIC individual particles are tracked in continuous phase space, while the movements of the distribution, e.g., densities and currents, are computed simultaneously on Eulerian mesh points.\par
-SPIS is a Java based software. Packages and updates have been added to the software during the last 20 years, which makes it difficult to get a good overview of what the code actually does. The user interface is good enough so that it's possible to use the software without knowledge of the code. This is, however, not advisable since the user most likely will come across problems when running the simulations or unrealistic results, that can only be explain by a good understanding of the code. This report will therefore include both a description of how to run the simulations and short code sections describing what is actually being executed (not yet included in v5 of the this guide). This will help the user to dig deeper into the code themselves and to retrieve the knowledge that is needed for their specific project.
+SPIS is a Java based software. Packages and updates have been added to the software during the last 20 years, which makes it difficult to get a good overview of what the code actually does. The user interface is good enough so that it's possible to use the software without knowledge of the code. This is, however, not advisable since the user most likely will come across problems when running the simulations or unrealistic results, that can only be explained by a good understanding of the code. This report will therefore include both a description of how to run the simulations and short code sections describing what is actually being executed (not yet included in v5 of the this guide). This will help the user to dig deeper into the code themselves and to retrieve the knowledge that is needed for their specific project.
 
 \subsection{Download and install}
 
-The first step in running SPIS simulations is to register as a member of the  Spacecraft Plasma Interactions Network in Europe (SPINE), the official community for all SPIS users. The registration is made on the SPINE registration page: \url{https://www.spis.org/register/}. Click the button labeled \verb|SPINE Community login form| and on the following page, below the \verb|Sign In| button, select the option to \verb|Register|.  Once the registration is approved, SPIS can be downloaded from \url{https://www.spis.org/get/software/spis/surface/latest/}. This link will open a page similar to the window shown in Figure 1, where the appropriate version of SPIS can be selected based on the operating system.
-
-If choosing \verb|Download| and entering a username and password, the site redirects to the page shown in Figure 2. By clicking \verb|Download software|, it will redirect again to the page shown in Figure 3. From there, selecting \verb|spis/|, \verb|surface/|, \verb|latest/| will lead to the same page as shown in Figure 1.
+The first step in running SPIS simulations is to register as a member of the  Spacecraft Plasma Interactions Network in Europe (SPINE), the official community for all SPIS users. The registration is made on the SPINE registration page: \url{https://www.spis.org/register/}. Click the button labeled \verb|SPINE Community login form| and on the following page, below the \verb|Sign In| button, select the option to \verb|Register|. Once the registration is approved, SPIS can be downloaded from \url{https://www.spis.org/get/software/spis/surface/latest/}. This link will open a page similar to the window shown in Figure 1, where the appropriate version of SPIS can be selected based on the operating system. If choosing \verb|Download| and entering a username and password, the site redirects to the page shown in Figure 2. By clicking \verb|Download software|, it will redirect again to the page shown in Figure 3. From there, selecting \verb|spis/|, \verb|surface/|, \verb|latest/| will lead to the same page as shown in Figure 1.
 
 \begin{figure}[!ht]
     \centering
@@ -81,74 +79,45 @@ All these steps will be covered in order, using a simplified spacecraft geometry
 
 \subsection{Building the spacecraft 3D model}
 
-All these steps will be covered in order, using a simplified spacecraft geometry, a basic cube, to simulate the surface charging of a spacecraft in the ionosphere of Jupiter's moon Ganymede at an altitude of 400 km, as an example.
+
 \begin{enumerate}[label=\Alph*.]
     \item The model can be built in SPIS using the \verb|Edit geometry file| option.
     \item The Gmsh user interface can be used to build the geometry file.
-    \item For very simple geometries, the easiest option is often to create a txt file and load it into Gmsh.
+    \item For very simple geometries, the easiest option is often to create a \verb|.geo| file and load it into Gmsh.
 \end{enumerate}
-For our example we will use option C.\par
+
+This section is a step by step tutorial of option C.\par
 A common problem when running SPIS simulations is that the simulation mesh is not properly defined. It is therefore not recommended to build a complex spacecraft model before moving on to step 2 to 5 of setting up the simulation. Start instead with a very simple spacecraft model, preferably just a square or cylinder with the relevant proportions and run a first simulation using that geometry. This approach helps ensure that the rest of the simulation inputs are in order, before investing time in developing a more detailed spacecraft model. It supports the creation of a robust  simulation set up by isolating potential issues related to the simulation mesh from those associated with the other input parameters, defined in step 3 to 5 of the simulation set up process.\par
-When building a geometry in Gmsh start by defining the coordinates of the points that is the foundation of the spacecraft geometry. An example is shown in Figure 4.\par
-We will begin with building a simple cube that represents the spacecraft, as shown in Figure 4. The parameters (l and b) that are defined in the beginning of the file gives the resolution of the mesh at the surface of the spacecraft, here called l, and at the outer boundary of the mesh, here called b.\par
-The Points give the coordinates for the points that define the geometry and also the mesh resolution at that specific point. For example, \mint{java}|Point(100) = {-1, -1, -1, l};| states that a point with ID number \verb|100| should be located at x = -1, y = -1, z = -1 and the mesh connected to this point should have mesh resolution \verb|l|, which is given a length of $0.1 \si{m}$ in the lines above. Points \verb|100| to \verb|107| gives the corner points of the sphere. We also have to define the outer boundary of our computational volume, these are given by Points \verb|108| to \verb|114|. Please be careful to use a large enough simulation geometry around the spacecraft, if the simulation volume is too small this will provide erroneous results. Large enough means that the computational volume should include any changes to the local environment caused by the presence of the spacecraft, this size will depend on the environment and spacecraft design. In this example we start with a volume with a diameter of $60 \si{m}$ for a cube shaped spacecraft with sides of $2 \si{m}$.
+We first start by creating a \verb|.geo| file which you can then open with your editor of choice (notepad works too), and paste the code below which will create a simple mesh, simulating a simple cubic spacecraft inside of a spheric field.
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{fig4.jpg}
-    \caption{The beginning of the file that defines the spacecraft geometry.}
-\end{figure}
+\begin{minted}{java}
+    // Simple spacecraft model 
+    // Mika Holmberg 
+    // 2025-06-13
 
-After defining the points, define lines that connect the points, as shown in Figure 5. Here the three most commonly used options are
-\begin{enumerate}
-    \item Line, which is only used for straight lines
-    \item Circle, which is only used for sections of circles
-    \item Ellipse, which is used for sections of ellipses
-\end{enumerate}
-For example, \mint{java}|Line(200) = {100, 101};| states that a line with ID number \verb|200| should be located between the points with ID numbers \verb|100| and \verb|101|. The direction of the line does not matter in this instance, so \mint{java}|Line(200) = {100, 101}; and Line(200) = {101, 100};| will give the same result.\par
-In Gmsh, the circle sections must be smaller than 180 degrees to ensure that the software correctly identifies the corresponding arc. The first point defines the start of the arc, the second defines the center of the circle and the third defines the end of the arc. After defining the lines, each surface must be defined, as shown in Figure 6. It is important to distinguish between surfaces with different materials, since the second step of the simulation set up is to define the materials and their properties. At that stage, each surface material must be defined individually. To define a surface, begin by listing the lines that form the boundary of that surface. For instance, \mint{java}|Line Loop(300) = {200, 201, 202, 203};| states that the lines with ID numbers \verb|200|, \verb|201|, \verb|202|, and \verb|203| form a closed line loop with ID number \verb|300|. This closed line loop defines a plane surface so use \mint{java}|Plane Surface (301) = {300};| to state that the surface with ID \verb|301| is the surface within the Line Loop with ID \verb|300|.
+    SetFactory("OpenCASCADE");
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{fig5.jpg}
-    \caption{The lines that connects the points of the spacecraft geometry.}
-\end{figure}
+    // Mesh Sizes
+    mesh_box = 0.1;
+    mesh_sphere = 2;
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{fig6.jpg}
-    \caption{How to define the surfaces of the spacecraft model.}
-\end{figure}
+    // The spacecraft body 
+    Box(1) = {-1, -1, -1, 2, 2, 2};
+    MeshSize{ PointsOf { Volume{1}; } } = mesh_box;
 
-The directions of the enclosed lines that make up a surface are crucial. For example, Line Loop \verb|312| is made up of the line segments \verb|212|, \verb|221| and \verb|216|, but the directions of the lines are not all the same. Line \verb|212| is defined from Point \verb|109| to \verb|110|, Line \verb|221| is defined from Point \verb|113| to \verb|110|, and Line \verb|216| is defined from Point \verb|109| to \verb|113|. Hence, by reversing the direction of lines \verb|221| and \verb|216| a closed loop is formed with all segments oriented in the same direction. The order of the points will then be \verb|109|, \verb|110|, \verb|113| and back to \verb|109|. Alternatively, the line loop can be defined in the opposite direction as \mint{java}|{-212, 221, 216}|, which would achieve the same result. Since it is easy to make mistakes at this step, it is imperative to double check wether the line loops are correctly defined before moving on. This can be done by opening the geometry file in Gmsh. Click on the Gmsh icon in the Application folder and choose \verb|File| and \verb|Open| and choose the geometry file. For the simple geometry that we are using here, this opens a window like the one in Figure 7. If the Gmsh version included in the downloaded SPIS package is being used, Gmsh can be found within the SPIS folder in \verb|dependencies/thirdparty|.\par
-The blue circle shown in Figure 7 is the outer boundary of the computational volume and the small square represents the spacecraft. If one of the line loops has been defined incorrectly, the window would look like in Figure 8. Please note the red error message displayed at the bottom of the window.
+    // The outer boundary
+    Sphere(2) = {0, 0, 0, 30};
+    MeshSize{ PointsOf { Volume{2}; } } = mesh_sphere;
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{fig7.jpg}
-    \caption{The spacecraft geo file opened in Gmsh.}
-\end{figure}
+    BooleanDifference(3) = {Volume{2};Delete;}{Volume{1};Delete;};
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{fig8.jpg}
-    \caption{The red text shows the error message of Gmsh.}
-\end{figure}
+    Physical Surface(600) = {1};
+    Physical Surface(601) = {2};
+    Physical Volume(700) = {3};
+\end{minted}
 
-The error message shows that something is defined incorrectly. Clicking on the red line reveals the full error message: Curve loop \verb|312| is wrong, Wrong definition of surface \verb|313|: 1 borders instead of 3 or 4. Rotating the geometry and zooming in allows for visual inspection to ensure that all the points and lines are properly defined, as can be seen in Figure 9.\par
-To verify that all the surfaces are correctly defined press \verb|Tools|, \verb|Options|, \verb|Geometry| and mark \verb|Surfaces|. This will include grey dashed lines crossing all the defined surfaces, as shown in Figure 10. Enabling the \verb|Volumes| option reveals a yellow sphere at the center of the computational volume. Defining the computational volume begins with creating a Surface Loop, as shown in Figure 11. For example, \mint{java}|Surface Loop(400) = {301, 303, 305, 307, 309, 311};| states that a surfaces loop with ID number \verb|400| contains all the plane surfaces of the sphere that represents the spacecraft. Surface Loop \verb|401| contains all the surfaces of the outer boundary. To define the computational volume use \mint{java}|Volume(500) = {401, 400};| where the inner surface loop \verb|400| is subtracted from the outer surface loop \verb|401|, resulting in a volume between the spacecraft model and the outer boundary, which is the computational volume. It is important to make sure that all volumes are closed volumes and that no surfaces are missing.
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{fig9.jpg}
-    \caption{The geometry can be rotated and enlarged.}
-\end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{fig10.jpg}
-    \caption{The surfaces are crossed by grey dashed lines.}
-\end{figure}
+The following is a short explanation of the mesh generating code, it is recommended to read through it if you are to create your own custom mesh. We use the \verb|OpenCASCADE| module which helps us draw 3D shapes in an efficient way. We first start by defining the mesh sizes of both of our surfaces; these two different meshes will be automatically linked together by lines in the Gmsh software. As the mesh size of the inner box is smaller than the mesh size of the outer sphere, the mesh created within the volume of the sphere will not be uniform and becomes larger as you expand outwards from the box to reach a size of 2 at the sphere boundary. We then 
+You can also find in the appendix an alternative version of this code that does not use the OpenCASCADE module, however it is only there for information purposes as it is a lot more convoluted than this simple solution. In our testing we have only found advantages to using the OpenCASCADE module compared to the vanilla solution and we recommend to use it. You can find the documentation and tutorials here:
 
 After defining all the points, lines, surfaces and volumes, these entities have to be grouped together into what in Gmsh is called physical surfaces and volumes. An example is shown in Figure 11. The Physical Volume should be the same computational volume as defined earlier.
 
@@ -325,10 +294,74 @@ After setting the environmental parameters it is time to start the simulation by
     \caption{The simulation is running.}
 \end{figure}
 
+\section{}
+
 \section{Appendix}
 \subsection{Appendix A}
 
-    The spacecraft geometry model used for the guide in Chapter 2.
+Alternative (old) spacecraft geometry model used for the guide in Chapter 2.\par
+When building a geometry in Gmsh start by defining the coordinates of the points that is the foundation of the spacecraft geometry. An example is shown in Figure 4.\par
+We will begin with building a simple cube that represents the spacecraft, as shown in Figure 4. The parameters (l and b) that are defined in the beginning of the file gives the resolution of the mesh at the surface of the spacecraft, here called l, and at the outer boundary of the mesh, here called b.\par
+The Points give the coordinates for the points that define the geometry and also the mesh resolution at that specific point. For example, \mint{java}|Point(100) = {-1, -1, -1, l};| states that a point with ID number \verb|100| should be located at x = -1, y = -1, z = -1 and the mesh connected to this point should have mesh resolution \verb|l|, which is given a length of $0.1 \si{m}$ in the lines above. Points \verb|100| to \verb|107| gives the corner points of the sphere. We also have to define the outer boundary of our computational volume, these are given by Points \verb|108| to \verb|114|. Please be careful to use a large enough simulation geometry around the spacecraft, if the simulation volume is too small this will provide erroneous results. Large enough means that the computational volume should include any changes to the local environment caused by the presence of the spacecraft, this size will depend on the environment and spacecraft design. In this example we start with a volume with a diameter of $60 \si{m}$ for a cube shaped spacecraft with sides of $2 \si{m}$.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{fig4.jpg}
+    \caption{The beginning of the file that defines the spacecraft geometry.}
+\end{figure}
+
+After defining the points, define lines that connect the points, as shown in Figure 5. Here the three most commonly used options are
+\begin{enumerate}
+    \item Line, which is only used for straight lines
+    \item Circle, which is only used for sections of circles
+    \item Ellipse, which is used for sections of ellipses
+\end{enumerate}
+For example, \mint{java}|Line(200) = {100, 101};| states that a line with ID number \verb|200| should be located between the points with ID numbers \verb|100| and \verb|101|. The direction of the line does not matter in this instance, so \mint{java}|Line(200) = {100, 101}; and Line(200) = {101, 100};| will give the same result.\par
+In Gmsh, the circle sections must be smaller than 180 degrees to ensure that the software correctly identifies the corresponding arc. The first point defines the start of the arc, the second defines the center of the circle and the third defines the end of the arc. After defining the lines, each surface must be defined, as shown in Figure 6. It is important to distinguish between surfaces with different materials, since the second step of the simulation set up is to define the materials and their properties. At that stage, each surface material must be defined individually. To define a surface, begin by listing the lines that form the boundary of that surface. For instance, \mint{java}|Line Loop(300) = {200, 201, 202, 203};| states that the lines with ID numbers \verb|200|, \verb|201|, \verb|202|, and \verb|203| form a closed line loop with ID number \verb|300|. This closed line loop defines a plane surface so use \mint{java}|Plane Surface (301) = {300};| to state that the surface with ID \verb|301| is the surface within the Line Loop with ID \verb|300|.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{fig5.jpg}
+    \caption{The lines that connects the points of the spacecraft geometry.}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{fig6.jpg}
+    \caption{How to define the surfaces of the spacecraft model.}
+\end{figure}
+
+The directions of the enclosed lines that make up a surface are crucial. For example, Line Loop \verb|312| is made up of the line segments \verb|212|, \verb|221| and \verb|216|, but the directions of the lines are not all the same. Line \verb|212| is defined from Point \verb|109| to \verb|110|, Line \verb|221| is defined from Point \verb|113| to \verb|110|, and Line \verb|216| is defined from Point \verb|109| to \verb|113|. Hence, by reversing the direction of lines \verb|221| and \verb|216| a closed loop is formed with all segments oriented in the same direction. The order of the points will then be \verb|109|, \verb|110|, \verb|113| and back to \verb|109|. Alternatively, the line loop can be defined in the opposite direction as \mint{java}|{-212, 221, 216}|, which would achieve the same result. Since it is easy to make mistakes at this step, it is imperative to double check wether the line loops are correctly defined before moving on. This can be done by opening the geometry file in Gmsh. Click on the Gmsh icon in the Application folder and choose \verb|File| and \verb|Open| and choose the geometry file. For the simple geometry that we are using here, this opens a window like the one in Figure 7. If the Gmsh version included in the downloaded SPIS package is being used, Gmsh can be found within the SPIS folder in \verb|dependencies/thirdparty|.\par
+The blue circle shown in Figure 7 is the outer boundary of the computational volume and the small square represents the spacecraft. If one of the line loops has been defined incorrectly, the window would look like in Figure 8. Please note the red error message displayed at the bottom of the window.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{fig7.jpg}
+    \caption{The spacecraft geo file opened in Gmsh.}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{fig8.jpg}
+    \caption{The red text shows the error message of Gmsh.}
+\end{figure}
+
+The error message shows that something is defined incorrectly. Clicking on the red line reveals the full error message: Curve loop \verb|312| is wrong, Wrong definition of surface \verb|313|: 1 borders instead of 3 or 4. Rotating the geometry and zooming in allows for visual inspection to ensure that all the points and lines are properly defined, as can be seen in Figure 9.\par
+To verify that all the surfaces are correctly defined press \verb|Tools|, \verb|Options|, \verb|Geometry| and mark \verb|Surfaces|. This will include grey dashed lines crossing all the defined surfaces, as shown in Figure 10. Enabling the \verb|Volumes| option reveals a yellow sphere at the center of the computational volume. Defining the computational volume begins with creating a Surface Loop, as shown in Figure 11. For example, \mint{java}|Surface Loop(400) = {301, 303, 305, 307, 309, 311};| states that a surfaces loop with ID number \verb|400| contains all the plane surfaces of the sphere that represents the spacecraft. Surface Loop \verb|401| contains all the surfaces of the outer boundary. To define the computational volume use \mint{java}|Volume(500) = {401, 400};| where the inner surface loop \verb|400| is subtracted from the outer surface loop \verb|401|, resulting in a volume between the spacecraft model and the outer boundary, which is the computational volume. It is important to make sure that all volumes are closed volumes and that no surfaces are missing.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{fig9.jpg}
+    \caption{The geometry can be rotated and enlarged.}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{fig10.jpg}
+    \caption{The surfaces are crossed by grey dashed lines.}
+\end{figure}
+
+Code:
 
 \begin{minted}{java}
 
